@@ -6,12 +6,33 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 12:29:12 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 15:39:00 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 18:41:23 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-#include <limits.h>
+
+static char	*convert_positive(long nb, char *buffer, int i)
+{
+	while (nb > 0)
+	{
+		buffer[i--] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	return (&buffer[i + 1]);
+}
+
+static char	*convert_negative(long nb, char *buffer, int i)
+{
+	nb = -nb;
+	while (nb > 0)
+	{
+		buffer[i--] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	buffer[i--] = '-';
+	return (&buffer[i + 1]);
+}
 
 char	*ft_itoa(int n)
 {
@@ -27,34 +48,18 @@ char	*ft_itoa(int n)
 		buffer[i] = '0';
 		return (&buffer[i]);
 	}
-
 	if (nb < 0)
-	{
-		nb = -nb;
-		while (nb > 0)
-		{
-			buffer[i--] = (nb % 10) + '0';
-			nb /= 10;
-		}
-		buffer[i--] = '-';
-	}
+		return (convert_negative(nb, buffer, i));
 	else
-	{
-		while (nb > 0)
-		{
-			buffer[i--] = (nb % 10) + '0';
-			nb /= 10;
-		}
-	}
-	return (&buffer[i + 1]);
+		return (convert_positive(nb, buffer, i));
 }
 
-void	ft_print_int(long n, t_printf *data)
+void	ft_print_int(int n, t_printf *data)
 {
-	char		*str;
+	char	*str;
 
-	str = ft_itoa((int)n);
-	if (!str)
+	str = ft_itoa(n);
+	if (!str || data->error)
 	{
 		data->error = 1;
 		return ;

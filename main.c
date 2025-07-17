@@ -6,57 +6,96 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 23:55:54 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 15:34:44 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 18:49:11 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main(void)
+int	main(void)
 {
-	int n = 42;
-	int a = 42;
-    int b = -42;
-    int c = 0;
+	char	*str = "hello";
+	char	*null_str = NULL;
+	int		n = 2025;
+	int		*ptr = &n;
 
-	printf("printf d: [%d]\n", a);
-	ft_printf("ft_printf d: [%d]\n\n", a);
+	printf("---------- %%c ----------\n");
+	printf("printf: [%c]\n", 'A');
+	ft_printf("ft_printf: [%c]\n\n", 'A');
 
-	printf("printf d négatif: [%d]\n", b);
-	ft_printf("ft_printf d négatif: [%d]\n\n", b);
+	printf("printf: [%c]\n", 0);
+	ft_printf("ft_printf: [%c]\n\n", 0);
 
-	printf("printf d zéro: [%d]\n", c);
-	ft_printf("ft_printf d zéro: [%d]\n\n", c);
+	printf("---------- %%s ----------\n");
+	printf("printf: [%s]\n", str);
+	ft_printf("ft_printf: [%s]\n\n", str);
 
-	printf("printf i: [%i]\n", a);
-	ft_printf("ft_printf i: [%i]\n\n", a);
+	printf("printf: [%s]\n", "");
+	ft_printf("ft_printf: [%s]\n\n", "");
 
-	printf("printf i négatif: [%i]\n", b);
-	ft_printf("ft_printf i négatif: [%i]\n\n", b);
+	printf("printf: [%s]\n", null_str);
+	ft_printf("ft_printf: [%s]\n\n", null_str);
 
-	ft_printf("%c\n", 'A');
- 	printf("%c\n\n", 'A');
+	printf("---------- %%d / %%i ----------\n");
+	printf("printf: [%d]\n", 0);
+	ft_printf("ft_printf: [%d]\n\n", 0);
 
-	ft_printf("%s\n", "hello");
- 	printf("%s\n\n", "hello");
+	printf("printf: [%d]\n", -123);
+	ft_printf("ft_printf: [%d]\n\n", -123);
 
-	ft_printf("%d\n", -42);
- 	printf("%d\n\n", -42);
+	printf("printf: [%d]\n", INT_MIN);
+	ft_printf("ft_printf: [%d]\n\n", INT_MIN);
 
-	ft_printf("%u\n", 42u);
- 	printf("%u\n\n", 42u);
+	printf("printf: [%d]\n", INT_MAX);
+	ft_printf("ft_printf: [%d]\n\n", INT_MAX);
 
-	ft_printf("%x\n", 255);
- 	printf("%x\n\n", 255);
+	printf("printf: [%i]\n", 42);
+	ft_printf("ft_printf: [%i]\n\n", 42);
 
-	ft_printf("%X\n", 255);
- 	printf("%X\n\n", 255);
+	printf("---------- %%u ----------\n");
+	printf("printf: [%u]\n", 0);
+	ft_printf("ft_printf: [%u]\n\n", 0);
 
-	ft_printf("%p\n", &n);
- 	printf("%p\n\n", &n);
+	printf("printf: [%u]\n", 42);
+	ft_printf("ft_printf: [%u]\n\n", 42);
 
-	ft_printf("%%\n");
-	printf("%%\n\n");
+	printf("printf: [%u]\n", UINT_MAX);
+	ft_printf("ft_printf: [%u]\n\n", UINT_MAX);
 
-	return (0);
+	printf("printf: [%u]\n", -1);
+	ft_printf("ft_printf: [%u]\n\n", -1);
+
+	printf("---------- %%x / %%X ----------\n");
+	printf("printf: [%x]\n", 0);
+	ft_printf("ft_printf: [%x]\n\n", 0);
+
+	printf("printf: [%x]\n", 255);
+	ft_printf("ft_printf: [%x]\n\n", 255);
+
+	printf("printf: [%x]\n", UINT_MAX);
+	ft_printf("ft_printf: [%x]\n\n", UINT_MAX);
+
+	printf("printf: [%x]\n", -1);
+	ft_printf("ft_printf: [%x]\n\n", -1);
+
+	printf("printf: [%X]\n", 255);
+	ft_printf("ft_printf: [%X]\n\n", 255);
+
+	printf("---------- %%p ----------\n");
+	printf("printf: [%p]\n", (void *)ptr);
+	ft_printf("ft_printf: [%p]\n\n", (void *)ptr);
+
+	printf("printf: [%p]\n", NULL);
+	ft_printf("ft_printf: [%p]\n\n", NULL);
+
+	printf("---------- %% ----------\n");
+	printf("printf: [%%]\n");
+	ft_printf("ft_printf: [%%]\n\n");
+
+	printf("---------- MIX ----------\n");
+	printf("printf: [%s] [%d] [%u] [%x] [%p] [%c] [%%]\n", str, -42, 42u, 0xff, &n, 'Z');
+	ft_printf("ft_printf: [%s] [%d] [%u] [%x] [%p] [%c] [%%]\n\n", str, -42, 42u, 0xff, &n, 'Z');
+
+	return(0);
 }
+

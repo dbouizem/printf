@@ -6,7 +6,7 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 01:21:38 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 04:25:30 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 17:22:16 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		parse_format(const char **format, t_printf *data);
 void		ft_print_char(char c, t_printf *data);
 void		ft_print_str(char *s, t_printf *data);
 void		ft_print_ptr(void *ptr, t_printf *data);
-void		ft_print_int(long n, t_printf *data);
+void		ft_print_int(int n, t_printf *data);
 void		ft_print_u_int(unsigned int n, t_printf *data);
 void		ft_print_hex(unsigned int n, int uppercase, t_printf *data);
 

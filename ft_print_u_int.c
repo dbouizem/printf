@@ -6,7 +6,7 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 06:24:09 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 04:53:56 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 18:18:38 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,19 @@
 char	*ft_utoa_base(unsigned int n, const char *base)
 {
 	static char	buffer[35];
-	int		base_len;
-	int		bufsize;
-	int		i;
+	int			base_len;
+	int			bufsize;
+	int			i;
 
 	bufsize = sizeof(buffer);
 	base_len = ft_strlen(base);
 	i = bufsize - 1;
 	buffer[i--] = '\0';
 	if (n == 0)
+	{
 		buffer[i] = base[0];
+		return (&buffer[i]);
+	}
 	while (n > 0 && i >= 0)
 	{
 		buffer[i--] = base[n % base_len];

@@ -6,12 +6,12 @@
 #    By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/21 17:17:29 by dbouizem          #+#    #+#              #
-#    Updated: 2025/07/17 15:44:13 by dbouizem         ###   ########.fr        #
+#    Updated: 2025/07/17 18:13:18 by dbouizem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-TEST = m
+TEST = program
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -30,7 +30,7 @@ SRCS = \
 
 OBJS = $(SRCS:.c=.o)
 
-TEST_SRC = my_moull.c
+TEST_SRC = main.c
 
 TEST_OBJ = $(TEST_SRC:.c=.o)
 

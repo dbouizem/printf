@@ -6,7 +6,7 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 04:03:41 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 16:00:44 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 17:50:02 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_utoa(uintptr_t n, const char *base)
 {
 	static char	buffer[20];
-	int		base_len;
-	int		bufsize;
-	int		i;
+	int			base_len;
+	int			bufsize;
+	int			i;
 
 	bufsize = sizeof(buffer);
 	base_len = ft_strlen(base);

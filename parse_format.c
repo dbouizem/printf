@@ -6,7 +6,7 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:11:18 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 04:15:46 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 18:18:07 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	handle_dispatch_format(char specifier, t_printf *data)
 	else if (specifier == 'p')
 		ft_print_ptr(va_arg(data->args, void *), data);
 	else if (specifier == 'd' || specifier == 'i')
-		ft_print_int((long)va_arg(data->args, int), data);
+		ft_print_int(va_arg(data->args, int), data);
 	else if (specifier == 'u')
-		ft_print_u_int(va_arg(data->args,  unsigned int), data);
+		ft_print_u_int(va_arg(data->args, unsigned int), data);
 	else if (specifier == 'x')
 		ft_print_hex(va_arg(data->args, unsigned int), 0, data);
 	else if (specifier == 'X')
@@ -59,4 +59,3 @@ void	parse_format(const char **format, t_printf *data)
 	else
 		handle_invalid_specifier(format, data);
 }
-
