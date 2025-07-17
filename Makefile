@@ -6,14 +6,14 @@
 #    By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/21 17:17:29 by dbouizem          #+#    #+#              #
-#    Updated: 2025/07/17 18:13:18 by dbouizem         ###   ########.fr        #
+#    Updated: 2025/07/17 19:20:57 by dbouizem         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 TEST = program
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+#CFLAGS = -Wall -Wextra -Werror
 
 LIBFT_PATH = libft
 LIBFT_LIB = $(LIBFT_PATH)/libft.a
@@ -60,5 +60,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
 

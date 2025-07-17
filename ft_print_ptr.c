@@ -6,11 +6,11 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 04:03:41 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 17:50:02 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 19:12:47 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 char	*ft_utoa(uintptr_t n, const char *base)
 {

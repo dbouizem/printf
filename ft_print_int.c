@@ -6,11 +6,11 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 12:29:12 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 18:41:23 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 19:12:43 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 static char	*convert_positive(long nb, char *buffer, int i)
 {

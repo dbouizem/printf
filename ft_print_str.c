@@ -6,11 +6,11 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 04:57:50 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 17:48:21 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 19:12:51 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 void	ft_print_str(char *str, t_printf *data)
 {

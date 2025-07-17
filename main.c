@@ -6,7 +6,7 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 23:55:54 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 18:49:11 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 19:24:30 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,25 @@ int	main(void)
 	printf("printf: [%s] [%d] [%u] [%x] [%p] [%c] [%%]\n", str, -42, 42u, 0xff, &n, 'Z');
 	ft_printf("ft_printf: [%s] [%d] [%u] [%x] [%p] [%c] [%%]\n\n", str, -42, 42u, 0xff, &n, 'Z');
 
+/*
+	printf("----------- Overflow tests -----------\n");
+
+	int overflow_plus = INT_MAX + 1;
+	int overflow_minus = INT_MIN - 1;
+	unsigned int u_overflow = -1;
+
+	printf("INT_MAX        : %d\n", INT_MAX);
+	printf("INT_MAX + 1    : %d\n", overflow_plus);
+	ft_printf("ft INT_MAX + 1 : %d\n\n", overflow_plus);
+
+	printf("INT_MIN        : %d\n", INT_MIN);
+	printf("INT_MIN - 1    : %d\n", overflow_minus);
+	ft_printf("ft INT_MIN - 1 : %d\n\n", overflow_minus);
+
+	printf("UINT_MAX       : %u\n", UINT_MAX);
+	printf("Unsigned -1    : %u\n", u_overflow);
+	ft_printf("ft Unsigned -1 : %u\n\n", u_overflow);
+*/
 	return(0);
 }
 

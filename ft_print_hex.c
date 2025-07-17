@@ -6,11 +6,11 @@
 /*   By: dbouizem <djihane.bouizem@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 05:04:14 by dbouizem          #+#    #+#             */
-/*   Updated: 2025/07/17 04:25:08 by dbouizem         ###   ########.fr       */
+/*   Updated: 2025/07/17 19:12:37 by dbouizem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 void	ft_print_hex(unsigned int n, int uppercase, t_printf *data)
 {
